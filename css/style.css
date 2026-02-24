@@ -1,0 +1,91 @@
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Базовая типографика */
+body {
+  background-color: #f3f0f3;
+  color: #1a1a1a;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+}
+
+/* Контейнер */
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 60px auto;
+  padding: 0 24px;
+}
+
+/* Вертикальный ритм */
+.section,
+.site-header,
+.site-footer {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-size: 2.2rem;
+  margin-bottom: 16px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+/* Ссылки */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Галерея */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 28px;
+}
+
+/* Карточка */
+.gallery__item {
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease;
+}
+
+.gallery__item:hover {
+  transform: translateY(-4px);
+}
+
+/* Изображение */
+.gallery__item img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+/* Подпись */
+.gallery__item figcaption {
+  padding: 16px;
+  font-size: 0.95rem;
+  color: #333;
+  border-top: 1px solid #eee;
+}
